@@ -52,9 +52,9 @@ Example:
 
 ```puppet
 class { 'perun':
-  servers => ['pakiti.localdomain:443'],
-  report  => false,
-  fail    => false,
+  servers   => ['pakiti.localdomain:443'],
+  report    => false,
+  send_fail => false,
 }
 ```
 
