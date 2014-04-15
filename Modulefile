@@ -1,0 +1,10 @@
+name 'ceritsc-pakiti'
+version '1.0.0'
+source 'git@github.com:CERIT-SC/puppet-pakiti.git'
+author 'ceritsc'
+license 'WTFPL'
+summary 'Puppet module with Pakiti client'
+description 'Module for sending list of installed packages to Pakiti service'
+project_page 'https://github.com/CERIT-SC/puppet-pakiti'
+
+dependency 'puppetlabs/stdlib', '>= 3.2.1'
