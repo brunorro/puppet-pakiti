@@ -8,7 +8,7 @@ manager and sends them to your patch monitoring service
 
 Module has been tested on:
 
-* Puppet 3.4
+* Puppet 3.4 and Facter 2.x (structured facts support is required!)
 * OS:
  * Debian 6,7
  * RHEL/CentOS 6
