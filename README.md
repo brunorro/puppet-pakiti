@@ -1,4 +1,4 @@
-# Puppet Pakiti moudle
+# Puppet Pakiti module
 
 This module gets list of installed software via supported package
 manager and sends them to your patch monitoring service
