@@ -2,7 +2,7 @@
 
 This module gets list of installed software via supported package
 manager and sends them to your patch monitoring service
-[Pakiti](https://github.com/tauceti2/pakiti2) (old web
+[Pakiti](https://github.com/CESNET/pakiti3) (old web
 http://pakiti.sourceforge.net/).
 
 ### Requirements
