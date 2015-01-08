@@ -39,6 +39,7 @@ class { 'perun':
   server_path    => '/feed/',     # server URL path
   host           => '...',        # reported hostname
   organization   => '...',        # reported organization (tag)
+  site           => '...',        # reported site
   os             => '...',        # reported OS
   arch           => '...',        # reported architecture
   kernel         => '...',        # reported running kernel
