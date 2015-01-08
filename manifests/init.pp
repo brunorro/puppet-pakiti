@@ -4,6 +4,7 @@ class pakiti (
   $server_path    = $pakiti::params::server_path,
   $host           = $pakiti::params::host,
   $organization   = $pakiti::params::organization, # aka tag
+  $site           = $pakiti::params::site,
   $os             = $pakiti::params::os,
   $arch           = $pakiti::params::arch,
   $kernel         = $pakiti::params::kernel,
@@ -54,6 +55,7 @@ class pakiti (
       {
         'host'    => $host,
         'tag'     => $organization,
+        'site'    => $site,
         'os'      => $os,
         'arch'    => $arch,
         'kernel'  => $kernel,

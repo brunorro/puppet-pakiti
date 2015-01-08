@@ -10,6 +10,7 @@ class pakiti::params {
   $server_path = '/feed/'
   $host = $::fqdn
   $organization = "Domain ${::domain}"
+  $site = ''
   $os = "${::operatingsystem} ${::operatingsystemrelease}"
   $arch = $::hardwaremodel
   $kernel = $::kernelrelease
