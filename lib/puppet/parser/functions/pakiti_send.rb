@@ -40,18 +40,23 @@ module Puppet::Parser::Functions
     http.use_ssl = true  
     request = Net::HTTP::Post.new(uri.path)
     request.set_form_data(params)
-    response = http.start {|h| h.request(request) }
 
-    if debug
-      Puppet.warning("pakiti_send(): Received server response "+
-                     "code #{response.code} (body: '#{response.body}')")
-    end
+    begin
+      response = http.start {|h| h.request(request) }
 
-    case response
-      when Net::HTTPSuccess
-        return ''
-      else
-        return response.body
+      if debug
+        Puppet.warning("pakiti_send(): Received server response "+
+                       "code #{response.code} (body: '#{response.body}')")
+      end
+
+      case response
+        when Net::HTTPSuccess
+          return ''
+        else
+          return response.body
+      end
+    rescue Exception => e
+      return e.message
     end
   end
 end
