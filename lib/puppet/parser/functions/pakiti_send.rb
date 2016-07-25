@@ -9,13 +9,13 @@ module Puppet::Parser::Functions
   newfunction(
     :pakiti_send,
     :type => :rvalue,
-    :arity => 6,
+    :arity => 5,
     :doc => <<-EOS
 ...
     EOS
   ) do |args|
 
-    servers, path, params, packages, ssl_verify = true, debug = args
+    servers, path, params, packages, debug = args
 
     post_packages = ''
     packages.each do |p|
@@ -38,9 +38,7 @@ module Puppet::Parser::Functions
 
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true 
-    if !ssl_verify 
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-    end
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     request = Net::HTTP::Post.new(uri.path)
     request.set_form_data(params)
 
