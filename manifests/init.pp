@@ -66,6 +66,7 @@ class pakiti (
         'type'    => $_type,
       },
       $_packages,
+      $_ssl_verify,
       $debug
     )
 
