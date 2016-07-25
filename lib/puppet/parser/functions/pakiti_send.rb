@@ -9,7 +9,7 @@ module Puppet::Parser::Functions
   newfunction(
     :pakiti_send,
     :type => :rvalue,
-    :arity => 5,
+    :arity => 6,
     :doc => <<-EOS
 ...
     EOS
