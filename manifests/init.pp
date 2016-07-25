@@ -11,6 +11,7 @@ class pakiti (
   $report         = $pakiti::params::report,
   $stringify_fail = $pakiti::params::stringify_fail,
   $send_fail      = $pakiti::params::send_fail,
+  $ssl_verify     = $pakiti::params::ssl_verify,
   $debug          = $pakiti::params::debug
 ) inherits pakiti::params {
 
@@ -65,6 +66,7 @@ class pakiti (
         'type'    => $_type,
       },
       $_packages,
+      $_ssl_verify,
       $debug
     )
 

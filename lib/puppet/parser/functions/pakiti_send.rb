@@ -15,7 +15,7 @@ module Puppet::Parser::Functions
     EOS
   ) do |args|
 
-    servers, path, params, packages, debug = args
+    servers, path, params, packages, ssl_verify = true, debug = args
 
     post_packages = ''
     packages.each do |p|
@@ -37,7 +37,10 @@ module Puppet::Parser::Functions
     end
 
     http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true  
+    http.use_ssl = true 
+    if !ssl_verify 
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    end
     request = Net::HTTP::Post.new(uri.path)
     request.set_form_data(params)
 
