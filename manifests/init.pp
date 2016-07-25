@@ -65,8 +65,8 @@ class pakiti (
         'proxy'   => $_proxy,
         'type'    => $_type,
       },
-      $_packages,
-      $_ssl_verify,
+      $packages,
+      $ssl_verify,
       $debug
     )
 
