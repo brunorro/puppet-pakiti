@@ -3,6 +3,7 @@ class pakiti::params {
   $report = false
   $stringify_fail = false
   $send_fail = true
+  $ssl_verify = true
   $debug = false
 
   $packages = $::packages
