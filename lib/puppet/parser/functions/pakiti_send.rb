@@ -38,7 +38,7 @@ module Puppet::Parser::Functions
 
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true 
-    if !ssl_verify
+    if not ssl_verify
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     end
     request = Net::HTTP::Post.new(uri.path)
